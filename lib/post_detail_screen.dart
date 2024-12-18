@@ -48,9 +48,12 @@ class PostDetailScreen extends StatelessWidget {
                       ?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 16),
-                Text(
-                  stripHtmlTags(post.content),
-                  style: Theme.of(context).textTheme.bodyLarge,
+                Hero(
+                  tag: post.title,
+                  child: Text(
+                    stripHtmlTags(post.content),
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
                 ),
               ],
             ),

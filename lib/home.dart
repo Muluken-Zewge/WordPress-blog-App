@@ -170,12 +170,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                       subtitle: Padding(
                                         padding:
                                             const EdgeInsets.only(top: 8.0),
-                                        child: Text(
-                                          stripHtmlTags(post.content),
-                                          maxLines: 3,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: const TextStyle(
-                                              color: Colors.black),
+                                        child: Hero(
+                                          tag: post.title,
+                                          child: Text(
+                                            stripHtmlTags(post.content),
+                                            maxLines: 3,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: const TextStyle(
+                                                color: Colors.black,
+                                                decoration:
+                                                    TextDecoration.none),
+                                          ),
                                         ),
                                       ),
                                     ),

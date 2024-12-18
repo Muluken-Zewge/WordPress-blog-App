@@ -17,7 +17,6 @@ class PostService {
         throw Exception('Failed with ${response.statusCode}');
       }
     } catch (e) {
-      print(e);
       throw Exception('Failed to load posts');
     }
   }
